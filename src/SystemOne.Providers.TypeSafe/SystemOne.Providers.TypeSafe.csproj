@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>SystemOne.Providers.TypeSafe</PackageId>
+    <Description>TypeSafe-hosted Jev for SystemOne: assets-style images and the danger-zone header. SystemOne.Providers.UseTypeSafeAi().</Description>
+    <PackageTags>systemone;jev;clef;decision-model;typesafe</PackageTags>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../SystemOne/SystemOne.csproj" />
+  </ItemGroup>
+</Project>

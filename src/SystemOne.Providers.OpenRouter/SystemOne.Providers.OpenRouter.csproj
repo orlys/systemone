@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>SystemOne.Providers.OpenRouter</PackageId>
+    <Description>OpenRouter gateway for SystemOne decision models (Jev, clef). SystemOne.Providers.UseOpenRouter().</Description>
+    <PackageTags>systemone;jev;clef;decision-model;openrouter</PackageTags>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../SystemOne/SystemOne.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,26 @@
+<Project>
+  <!-- 先套用上一層的共用設定；MSBuild 只會自動匯入最近的一個 Directory.Build.props -->
+  <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" />
+
+  <!-- nuget.org 顯示英文 README；繁體中文版一併打包，README 以絕對網址互相連結 -->
+  <PropertyGroup>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <None
+      Include="$(MSBuildThisFileDirectory)../README.md;$(MSBuildThisFileDirectory)../README.zh-TW.md"
+      Pack="true"
+      PackagePath="/"
+      Visible="false" />
+  </ItemGroup>
+
+  <!-- 每個套件都帶上文件：agent 指南與它連到的指南、ADR，使用端讀到的版本與安裝的一致，相對連結也不會斷 -->
+  <ItemGroup>
+    <None
+      Include="$(MSBuildThisFileDirectory)../docs/**/*.md"
+      Exclude="$(MSBuildThisFileDirectory)../docs/superpowers/**"
+      Pack="true"
+      PackagePath="docs/"
+      Visible="false" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>SystemOne</PackageId>
+    <Description>Typed .NET client for System One decision models (noul / choice / score / box): HttpSystemOneProvider for any self-hosted /v1/systemone server (clef-mlx, Kev, laya-serve, Ollama) and fallback chaining. Hosted services (SystemOne.Providers.TypeSafe, .Cloudflare, .OpenRouter, .Vercel), SystemOne.Providers.Clef, SystemOne.Testing and SystemOne.ModelSources.HuggingFace are separate packages.</Description>
+    <PackageTags>systemone;jev;clef;kev;laya;decision-model</PackageTags>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../SystemOne.Abstractions/SystemOne.Abstractions.csproj" />
+    <InternalsVisibleTo Include="SystemOne.Tests" />
+  </ItemGroup>
+</Project>

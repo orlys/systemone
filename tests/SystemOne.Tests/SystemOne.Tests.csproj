@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../src/SystemOne.Abstractions/SystemOne.Abstractions.csproj" />
+    <ProjectReference Include="../../src/SystemOne/SystemOne.csproj" />
+    <ProjectReference Include="../../src/SystemOne.Providers.Clef/SystemOne.Providers.Clef.csproj" />
+    <ProjectReference Include="../../src/SystemOne.Testing/SystemOne.Testing.csproj" />
+    <ProjectReference
+      Include="../../src/SystemOne.ModelSources.HuggingFace/SystemOne.ModelSources.HuggingFace.csproj" />
+    <ProjectReference Include="../../src/SystemOne.Providers.TypeSafe/SystemOne.Providers.TypeSafe.csproj" />
+    <ProjectReference Include="../../src/SystemOne.Providers.Cloudflare/SystemOne.Providers.Cloudflare.csproj" />
+    <ProjectReference Include="../../src/SystemOne.Providers.OpenRouter/SystemOne.Providers.OpenRouter.csproj" />
+    <ProjectReference Include="../../src/SystemOne.Providers.Vercel/SystemOne.Providers.Vercel.csproj" />
+    <ProjectReference Include="../../samples/SystemOne.ZeroTrust/SystemOne.ZeroTrust.csproj" />
+    <Using Include="Xunit" />
+  </ItemGroup>
+</Project>

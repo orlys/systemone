@@ -1,0 +1,4 @@
+# 換行行為釘在存放庫裡，不依賴各機器的 core.autocrlf。
+# 與 .editorconfig 的 end_of_line = crlf 一致：存放庫中存 LF，簽出成 CRLF。
+* text=auto eol=crlf
+*.sh text eol=lf

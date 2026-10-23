@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>SystemOne.Providers.Vercel</PackageId>
+    <Description>Vercel AI Gateway (TypeSafe-compatible endpoint) for SystemOne decision models. SystemOne.Providers.UseVercelAiGateway().</Description>
+    <PackageTags>systemone;jev;clef;decision-model;vercel</PackageTags>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../SystemOne/SystemOne.csproj" />
+  </ItemGroup>
+</Project>

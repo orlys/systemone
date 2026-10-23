@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>SystemOne.Providers.Cloudflare</PackageId>
+    <Description>Cloudflare Workers AI clef for SystemOne: account-scoped URL and the success/result envelope. SystemOne.Providers.UseCloudflareWorkersAi().</Description>
+    <PackageTags>systemone;jev;clef;decision-model;cloudflare</PackageTags>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../SystemOne.Providers.Clef/SystemOne.Providers.Clef.csproj" />
+  </ItemGroup>
+</Project>

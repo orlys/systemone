@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>SystemOne.ModelSources.HuggingFace</PackageId>
+    <Description>SystemOne.ModelSources.FromHuggingFace: zero-dependency, cached download of model weights from Hugging Face for in-process System One providers. LFS files are sha256-verified; small files are size-checked.</Description>
+    <PackageTags>systemone;jev;clef;kev;laya;decision-model;huggingface</PackageTags>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../SystemOne.Abstractions/SystemOne.Abstractions.csproj" />
+    <InternalsVisibleTo Include="SystemOne.Tests" />
+  </ItemGroup>
+</Project>

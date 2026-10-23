@@ -1,0 +1,20 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/SystemOne.Abstractions/SystemOne.Abstractions.csproj" />
+    <Project Path="src/SystemOne/SystemOne.csproj" />
+    <Project Path="src/SystemOne.Providers.Clef/SystemOne.Providers.Clef.csproj" />
+    <Project Path="src/SystemOne.Testing/SystemOne.Testing.csproj" />
+    <Project Path="src/SystemOne.ModelSources.HuggingFace/SystemOne.ModelSources.HuggingFace.csproj" />
+    <Project Path="src/SystemOne.Providers.TypeSafe/SystemOne.Providers.TypeSafe.csproj" />
+    <Project Path="src/SystemOne.Providers.Cloudflare/SystemOne.Providers.Cloudflare.csproj" />
+    <Project Path="src/SystemOne.Providers.OpenRouter/SystemOne.Providers.OpenRouter.csproj" />
+    <Project Path="src/SystemOne.Providers.Vercel/SystemOne.Providers.Vercel.csproj" />
+  </Folder>
+  <Folder Name="/samples/">
+    <Project Path="samples/SystemOne.Example/SystemOne.Example.csproj" />
+    <Project Path="samples/SystemOne.ZeroTrust/SystemOne.ZeroTrust.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/SystemOne.Tests/SystemOne.Tests.csproj" />
+  </Folder>
+</Solution>

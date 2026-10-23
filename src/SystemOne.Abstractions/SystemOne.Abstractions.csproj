@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>SystemOne.Abstractions</PackageId>
+    <Description>Contracts for System One decision-model providers: ISystemOne, the SystemOneProvider base, request/answer types, the SystemOne.Providers, SystemOne.Requests, SystemOne.ModelSources and SystemOne.Factory mount points. Zero dependencies.</Description>
+    <PackageTags>systemone;jev;clef;kev;laya;decision-model</PackageTags>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="SystemOne" />
+    <InternalsVisibleTo Include="SystemOne.Tests" />
+  </ItemGroup>
+</Project>

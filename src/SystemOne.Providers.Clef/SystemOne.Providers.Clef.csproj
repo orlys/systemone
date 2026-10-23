@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>SystemOne.Providers.Clef</PackageId>
+    <Description>Shortcut for a self-hosted clef server (e.g. clef-mlx) for SystemOne: SystemOne.Providers.UseClef(), the clef-flash model name.</Description>
+    <PackageTags>systemone;clef;decision-model</PackageTags>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../SystemOne/SystemOne.csproj" />
+  </ItemGroup>
+</Project>

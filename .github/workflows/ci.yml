@@ -1,0 +1,57 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      # v7.0.1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      # v6.0.0
+      - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68
+        with:
+          dotnet-version: '10.0.x'
+      - run: dotnet build -c Release -warnaserror
+      - run: dotnet test -c Release --no-build
+      - run: bash tools/check-docs.sh
+
+  publish:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: build-test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+    steps:
+      # v7.0.1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      # v6.0.0
+      - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68
+        with:
+          dotnet-version: '10.0.x'
+      # 所有套件同版號；ProjectReference 會依 Version 釘住 SystemOne.Abstractions 的相依版本
+      - run: for p in src/*/; do dotnet pack "$p" -c Release -o out -p:Version="${GITHUB_REF_NAME#v}"; done
+      - run: >
+          dotnet nuget push out/*.nupkg
+          --source "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json"
+          --api-key "${{ secrets.GITHUB_TOKEN }}"
+          --skip-duplicate
+      # v1.2.0
+      - uses: NuGet/login@8d196754b4036150537f80ac539e15c2f1028841
+        id: nuget
+        with:
+          user: orlys
+      - run: >
+          dotnet nuget push out/*.nupkg
+          --source https://api.nuget.org/v3/index.json
+          --api-key "${{ steps.nuget.outputs.NUGET_API_KEY }}"
+          --skip-duplicate

@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>SystemOne.Testing</PackageId>
+    <Description>MockSystemOneProvider, a configurable and recording test double for System One decision-model providers, plus SystemOne.Providers.UseMock().</Description>
+    <PackageTags>systemone;jev;clef;kev;laya;decision-model;testing;mock</PackageTags>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../SystemOne.Abstractions/SystemOne.Abstractions.csproj" />
+    <InternalsVisibleTo Include="SystemOne.Tests" />
+  </ItemGroup>
+</Project>
